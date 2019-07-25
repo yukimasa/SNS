@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,47 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SNS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="yv4-Uw-d2d">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9HF-Fz-n8x">
+                                <rect key="frame" x="0.0" y="1047" width="453" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="7B0-xy-VTl">
+                                        <connections>
+                                            <action selector="showActivityView:" destination="BYZ-38-t0r" id="DhD-3G-9EU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yv4-Uw-d2d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0pv-4n-aM9"/>
+                            <constraint firstItem="9HF-Fz-n8x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CdF-Bc-Kzc"/>
+                            <constraint firstAttribute="bottom" secondItem="yv4-Uw-d2d" secondAttribute="bottom" id="JDF-lF-h1O"/>
+                            <constraint firstItem="9HF-Fz-n8x" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QN7-BY-Ale"/>
+                            <constraint firstItem="9HF-Fz-n8x" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bpm-85-Qb8"/>
+                            <constraint firstItem="yv4-Uw-d2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lFk-Hx-4HI"/>
+                            <constraint firstItem="yv4-Uw-d2d" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pYT-iz-7Hc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="yv4-Uw-d2d" id="R4M-o3-OYe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="593" height="896"/>
+    </resources>
 </document>
